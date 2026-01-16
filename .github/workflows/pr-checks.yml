@@ -1,0 +1,49 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+
+    - name: Validate PHP syntax
+      run: |
+        for file in $(git diff --name-only --diff-filter=ACM origin/main... | grep -E '\.php$'); do
+          php -l "$file" || exit 1
+        done
+
+    - name: Check file permissions
+      run: |
+        if [ "$(git diff --name-only --diff-filter=ACM origin/main... | wc -l)" -gt 0 ]; then
+          echo "Changed files:"
+          git diff --name-only --diff-filter=ACM origin/main...
+        fi
+
+    - name: Check for secrets
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: ${{ github.event.pull_request.base.sha }}
+        head: HEAD
+
+    - name: PR size check
+      run: |
+        added=$(git diff --numstat origin/main... | awk '{sum += $1} END {print sum}')
+        deleted=$(git diff --numstat origin/main... | awk '{sum += $2} END {print sum}')
+        echo "Lines added: $added"
+        echo "Lines deleted: $deleted"
+        if [ "$added" -gt 500 ]; then
+          echo "⚠️ Large PR detected (>500 lines added)"
+        fi

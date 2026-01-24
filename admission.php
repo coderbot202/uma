@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
 <?php include __DIR__ . '/inc/header.php'; ?>
@@ -18,7 +19,6 @@ ini_set('display_errors', 1);
         </div>
       </div>
     </div>
-
 
     <div style="width:100%;padding:60px 40px;box-sizing:border-box;">
 
@@ -149,78 +149,161 @@ ini_set('display_errors', 1);
       </div>
     </div>
 
+    <!-- Marquee tag -->
+<div style="max-width:1100px; margin:40px auto; font-family:Arial, sans-serif; color:#333;">
 
+    <h1 style="text-align:center; color:#2c3e50; margin-bottom:10px;">
+        Admissions
+    </h1>
 
+    <p style="text-align:center; margin-bottom:40px;">
+        Simple and transparent admission process
+    </p>
 
-        <!-- Marquee Section -->
-        <div class="marquee-container">
-            <span class="marquee fw-semibold" style="color: #3B82F6;">
-               <a href="#">📢 Notice: School will remain closed on Friday, 15th October due to a scheduled maintenance.</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <a href="#">⭐ New! The Annual Sports Meet registration is now open. All students are encouraged to participate.</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <a href="#">📅 Reminder: Parent-Teacher meeting is scheduled for 25th October. Please check your email for the detailed schedule.</a>
-            </span>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px;">
+
+        <div style="background:#fff; padding:25px; border-radius:15px; border:1px solid #ddd; text-align:center;">
+            <div style="font-size:2.2em;">🏫</div>
+            <h3>School Enquiry</h3>
+            <p>Parents can visit the school campus to enquire about admissions.</p>
         </div>
+
+        <div style="background:#fff; padding:25px; border-radius:15px; border:1px solid #ddd; text-align:center;">
+            <div style="font-size:2.2em;">📝</div>
+            <h3>Admission Form</h3>
+            <p>Collect and carefully fill the admission form with correct details.</p>
+        </div>
+
+        <div style="background:#fff; padding:25px; border-radius:15px; border:1px solid #ddd; text-align:center;">
+            <div style="font-size:2.2em;">📂</div>
+            <h3>Document Submission</h3>
+            <p>Submit all required documents for verification.</p>
+        </div>
+
+        <div style="background:#fff; padding:25px; border-radius:15px; border:1px solid #ddd; text-align:center;">
+            <div style="font-size:2.2em;">✅</div>
+            <h3>Confirmation</h3>
+            <p>Admission is confirmed after successful verification and approval.</p>
+        </div>
+
     </div>
 
-<!-- End Actual Code For Marquee-->
+    <p style="margin-top:30px; text-align:center; font-size:0.95em; color:#555;">
+        Admission is subject to seat availability and school norms.
+    </p>
+
+</div>
+
+    
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row block-9">
+          <div class="col-md-5 pr-md-5">
+          	<h4 class="mb-4">Admission Enquiry Form</h4>
+            <form action="submit.php" method="POST">
+                <!-- Child Name -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                  <input type="text" name="child_name" placeholder="Child Name" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- Father Name -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                  <input type="text" name="father_name" placeholder="Father's Name" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- Mother Name -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                  <input type="text" name="mother_name" placeholder="Mother's Name" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- DOB -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-calendar-event-fill"></i>
+                  </span>
+                  <input type="date" name="dob" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- Mobile -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-phone-fill"></i>
+                  </span>
+                  <input type="tel" name="mobile" placeholder="Mobile*" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
 
 
+                <!-- Standard -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-mortarboard-fill"></i>
+                  </span>
+                  <select name="standard" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                    <option value="">Select Standard</option>
+                    <option>Nursery</option>
+                    <option>LKG</option>
+                    <option>UKG</option>
+                    <option>Class 1</option>
+                    <option>Class 2</option>
+                    <option>Class 3</option>
+                    <option>Class 4</option>
+                    <option>Class 5</option>
+                    <option>Class 6</option>
+                    <option>Class 7</option>
+                    <option>Class 8</option>
+                    <option>Class 9</option>
+                    <option>Class 10</option>
+                    <option>Class 11</option>
+                    <option>Class 12</option>
+                  </select>
+                </div>
 
+                <!-- Address -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-geo-alt"></i>
+                  </span>
+                  <input type="text" name="address" placeholder="Address" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
 
-<!-- Marquee tag -->
-    <section class="ftco-section mt-0 pt-0 mb-0 pb-0">
-    	<div class="container">
-    		<div class="row">
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services p-0 py-4 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center mb-3"><span class="flaticon-exam"></span></div>
-              <div class="media-body px-3">
-                <h3 class="heading">Admission</h3>
-                <p>Admissions are open for the 2025–26 session. Enroll your child in a school 
-that focuses on holistic growth, discipline, and academic excellence.</p>
-              </div>
-            </div>      
+                <!-- CAPTCHA -->
+                <div style="background:#fff; border:1px solid #ddd; padding:12px; display:flex; align-items:center; gap:10px; margin-bottom:15px;">
+                  <input type="checkbox" required>
+                  <span>I'm not a robot</span>
+                  <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="35">
+                </div>
+
+                <!-- Button -->
+                <button type="submit"
+                  style="background:#167ce9; color:#fff; width:100%; padding:12px; font-size:18px; border:none; cursor:pointer;">
+                  Apply Now
+                </button>
+
+              </form>
+          
           </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services p-3 py-4 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center mb-3"><span class="flaticon-blackboard"></span></div>
-              <div class="media-body px-3">
-                <h3 class="heading">Notice Board</h3>
-                <p>Stay updated with important announcements, exam schedules, and 
-upcoming events at Uma Memorial Public School.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services p-3 py-4 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center mb-3"><span class="flaticon-books"></span></div>
-              <div class="media-body px-3">
-                <h3 class="heading">Our Library</h3>
-                <p>Our well-stocked digital and physical library inspires curiosity, 
-creativity, and a lifelong love for reading.</p>
-              </div>
-            </div>    
+          <div class="col-md-7">
+            <img src="images/DSC_6227.JPG" alt="Image" class="img-fluid" style="padding-bottom:20px;">
+            <img src="images/feature-4.JPEG" alt="Image" class="img-fluid">
           </div>
         </div>
-    	</div>
-</section>
-
-<section class="ftco-freeTrial">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-12">
-    				<div class="d-flex align-items-center">
-			    		<div class="free-trial ftco-animate">
-			    			<h3>Encourages holistic development through programs </h3>
-			    			<p> Music, dance, arts & crafts, educational tours, healthy meals that ban junk food, playgrounds, and safe transportation.</p>
-			    		</div>
-			    		<div class="btn-join ftco-animate">
-			    			<p><a href="#" class="btn btn-primary py-3 px-4">Join now!</a></p>
-			    		</div>
-			    	</div>
-    			</div>
-    		</div>
-    	</div>
+      </div>
     </section>
 
     <section style="padding:60px 0; background:#fff;">
@@ -238,7 +321,7 @@ creativity, and a lifelong love for reading.</p>
 
           <!-- Cricket -->
           <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom:40px;">
-            <img src="images/cricket.jpg" alt="Cricket"
+            <img src="https://static.wixstatic.com/media/c59757_5fbe357f1dee443cb3a3e030246c1b88~mv2.png/v1/fill/w_568,h_378,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c59757_5fbe357f1dee443cb3a3e030246c1b88~mv2.png" alt="Cricket"
               style="
                 width:100%;
                 height:260px;
@@ -256,7 +339,7 @@ creativity, and a lifelong love for reading.</p>
 
           <!-- Football -->
           <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom:40px;">
-            <img src="images/football.jpg" alt="Football"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBNa9yuC1y-JPa1UHw6Y2tzV4kGn-bnDo0kA&s.jpg" alt="Football"
               style="
                 width:100%;
                 height:260px;
@@ -274,7 +357,7 @@ creativity, and a lifelong love for reading.</p>
 
           <!-- Lawn Tennis -->
           <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom:40px;">
-            <img src="images/lawn-tennis.jpg" alt="Lawn Tennis"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHIuoHNwuYWr5yN-tqClv9a9XWNRw3HLdfyQ&s.jpg" alt="Chess"
               style="
                 width:100%;
                 height:260px;
@@ -286,13 +369,13 @@ creativity, and a lifelong love for reading.</p>
               font-size:22px;
               font-weight:500;
             ">
-              Lawn Tennis
+              Chess
             </h4>
           </div>
 
           <!-- Badminton -->
           <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom:40px;">
-            <img src="images/badminton.jpg" alt="Badminton"
+            <img src="https://dpsbhopal.org/wp-content/uploads/2024/04/Badminton-side.webp" alt="Badminton"
               style="
                 width:100%;
                 height:260px;
@@ -313,187 +396,6 @@ creativity, and a lifelong love for reading.</p>
     </section>
 
 
-    <section class="ftco-section-3 img" style="background-image: url(images/DSC_6235.JPG);">
-    	<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row d-md-flex justify-content-center">
-    			<div class="col-md-9 about-video text-center">
-    				<h2 class="ftco-animate ion-ios-rocket">Turning Classrooms into Launchpads.</h2>
-    				<div class="video d-flex justify-content-center">
-    					<a href="https://youtu.be/--PASA5_2ok?si=GK-UhEIUAW-TSb9l" class="button popup-youtube d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-    <section class="ftco-counter bg-light" id="section-counter">
-    	<div class="container">
-    		<div class="row justify-content-center">
-    			<div class="col-md-10">
-		    		<div class="row">
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="3485">0</strong>
-		                <span>Happy Students</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="20">0</strong>
-		                <span>Years Of excellence</span>
-		              </div>
-		            </div>
-		          </div>
-		          
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center ">
-		              <div class="text">
-		                <strong class="number" data-number="100">0</strong>
-		                <span>Trophies Won</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="6">0</strong>
-		                <span>Startup By Students</span>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
-
-
-<div class="modal fade" id="admissionModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content" style="background:transparent; border:none;">
-      <div class="modal-body" style="padding:0;">
-        <!-- form -->
-         <div style="max-width:420px; margin:40px auto; background:#e9eef2; padding:25px; border-radius:6px; position:relative;">
-
-         <button type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                  style="position:absolute; top:10px; right:10px;">
-          </button>
-
-          <h2 style="font-family:Georgia,serif;font-size:28px;margin-bottom:5px;">
-            Admission Enquiry Form
-          </h2>
-
-          <form action="submit.php" method="POST">
-            <!-- Child Name -->
-            <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
-              <span style="padding:10px;font-size:18px;">
-                <i class="bi bi-person-fill"></i>
-              </span>
-              <input type="text" name="child_name" placeholder="Child Name" required
-                style="border:none;outline:none;padding:12px;width:100%;">
-            </div>
-
-            <!-- Father Name -->
-            <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
-              <span style="padding:10px;font-size:18px;">
-                <i class="bi bi-person-fill"></i>
-              </span>
-              <input type="text" name="father_name" placeholder="Father's Name" required
-                style="border:none;outline:none;padding:12px;width:100%;">
-            </div>
-
-            <!-- Mother Name -->
-            <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
-              <span style="padding:10px;font-size:18px;">
-                <i class="bi bi-person-fill"></i>
-              </span>
-              <input type="text" name="mother_name" placeholder="Mother's Name" required
-                style="border:none;outline:none;padding:12px;width:100%;">
-            </div>
-
-            <!-- DOB -->
-            <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
-              <span style="padding:10px;font-size:18px;">
-                <i class="bi bi-calendar-event-fill"></i>
-              </span>
-              <input type="date" name="dob" required
-                style="border:none;outline:none;padding:12px;width:100%;">
-            </div>
-
-            <!-- Mobile -->
-            <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
-              <span style="padding:10px;font-size:18px;">
-                <i class="bi bi-phone-fill"></i>
-              </span>
-              <input type="tel" name="mobile" placeholder="Mobile*" required
-                style="border:none;outline:none;padding:12px;width:100%;">
-            </div>
-
-
-            <!-- Standard -->
-            <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
-              <span style="padding:10px;font-size:18px;">
-                <i class="bi bi-mortarboard-fill"></i>
-              </span>
-              <select name="standard" required
-                style="border:none;outline:none;padding:12px;width:100%;">
-                <option value="">Select Standard</option>
-                <option>Nursery</option>
-                <option>LKG</option>
-                <option>UKG</option>
-                <option>Class 1</option>
-                <option>Class 2</option>
-                <option>Class 3</option>
-                <option>Class 4</option>
-                <option>Class 5</option>
-                <option>Class 6</option>
-                <option>Class 7</option>
-                <option>Class 8</option>
-                <option>Class 9</option>
-                <option>Class 10</option>
-                <option>Class 11</option>
-                <option>Class 12</option>
-              </select>
-            </div>
-
-            <!-- Address -->
-            <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
-              <span style="padding:10px;font-size:18px;">
-                <i class="bi bi-geo-alt"></i>
-              </span>
-              <input type="text" name="address" placeholder="Address" required
-                style="border:none;outline:none;padding:12px;width:100%;">
-            </div>
-
-            <!-- CAPTCHA -->
-            <div style="background:#fff; border:1px solid #ddd; padding:12px; display:flex; align-items:center; gap:10px; margin-bottom:15px;">
-              <input type="checkbox" required>
-              <span>I'm not a robot</span>
-              <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="35">
-            </div>
-
-            <!-- Button -->
-            <button type="submit"
-              style="background:#167ce9; color:#fff; width:100%; padding:12px; font-size:18px; border:none; cursor:pointer;">
-              Apply Now
-            </button>
-
-          </form>
-        </div>
-        <!-- end form -->
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
 <!--
 <script>
   $(document).ready(function () {
@@ -510,10 +412,3 @@ creativity, and a lifelong love for reading.</p>
 <?php include __DIR__ . '/inc/footer.php'; ?>
 
 
-<script>
-  $(document).ready(function () {
-    if (window.location.search.includes('popup=admission')) {
-      $('#admissionModal').modal('show');
-    }
-  });
-</script>

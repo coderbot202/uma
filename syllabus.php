@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
 <?php include __DIR__ . '/inc/header.php'; ?>
@@ -35,10 +36,10 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Nursery</h3>
             <ul>
-                <li>English Rhymes</li>
-                <li>Hindi Rhymes</li>
-                <li>Numbers & Shapes</li>
-                <li>Drawing & Coloring</li>
+                <li><a href="#">English Rhymes</a></li>
+                <li><a href="#">Hindi Rhymes</a></li>
+                <li><a href="#">Numbers & Shapes</a></li>
+                <li><a href="#">Drawing & Coloring</a></li>
             </ul>
         </div>
 
@@ -46,10 +47,10 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>LKG</h3>
             <ul>
-                <li>English Alphabet</li>
-                <li>Hindi Alphabet</li>
-                <li>Basic Maths</li>
-                <li>General Awareness</li>
+                <li><a href="#">English Alphabet</a></li>
+                <li><a href="#">Hindi Alphabet</a></li>
+                <li><a href="#">Basic Maths</a></li>
+                <li><a href="#">General Awareness</a></li>
             </ul>
         </div>
 
@@ -57,10 +58,10 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>UKG</h3>
             <ul>
-                <li>English Reading & Writing</li>
-                <li>Hindi Reading & Writing</li>
-                <li>Mathematics</li>
-                <li>Environmental Studies</li>
+                <li><a href="#">English Reading & Writing</a></li>
+                <li><a href="#">Hindi Reading & Writing</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Environmental Studies</a></li>
             </ul>
         </div>
 
@@ -68,55 +69,55 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class I</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Environmental Studies</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Environmental Studies</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class II</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Environmental Studies</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Environmental Studies</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class III</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Environmental Studies</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Environmental Studies</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class IV</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Environmental Studies</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Environmental Studies</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class V</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Environmental Studies</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Environmental Studies</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
@@ -124,12 +125,12 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class VI</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Science</li>
-                <li>Social Science</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Social Science</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
@@ -137,12 +138,12 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class VII</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Science</li>
-                <li>Social Science</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Social Science</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
@@ -150,12 +151,12 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class VIII</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Science</li>
-                <li>Social Science</li>
-                <li>Computer</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Social Science</a></li>
+                <li><a href="#">Computer</a></li>
             </ul>
         </div>
 
@@ -163,48 +164,48 @@ ini_set('display_errors', 1);
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class IX</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Science</li>
-                <li>Social Science</li>
-                <li>Information Technology</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Social Science</a></li>
+                <li><a href="#">Information Technology</a></li>
             </ul>
         </div>
 
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class X</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Science</li>
-                <li>Social Science</li>
-                <li>Information Technology</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Social Science</a></li>
+                <li><a href="#">Information Technology</a></li>
             </ul>
         </div>
 
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class XI</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Science</li>
-                <li>Social Science</li>
-                <li>Information Technology</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Social Science</a></li>
+                <li><a href="#">Information Technology</a></li>
             </ul>
         </div>
 
         <div style="background:#fff; padding:20px; border-radius:15px; border:1px solid #ddd;">
             <h3>Class XII</h3>
             <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Mathematics</li>
-                <li>Science</li>
-                <li>Social Science</li>
-                <li>Information Technology</li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Mathematics</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Social Science</a></li>
+                <li><a href="#">Information Technology</a></li>
             </ul>
         </div>
 

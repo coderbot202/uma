@@ -1,7 +1,7 @@
 
     <footer class="ftco-footer ftco-bg-dark ftco-section img" style="background-image: url(images/footer-1.jpeg); background-attachment:fixed;">
     	<div class="overlay"></div>
-      <div class="container">
+      <div class="container-fluid px-4">
         <div class="row mb-5">
           <div class="col-md-3">
             <div class="ftco-footer-widget mb-4">
@@ -15,33 +15,6 @@
               </ul>
             </div>
           </div>
-          <!-- <div class="col-md-4">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
           <div class="col-md-2">
              <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Site Links</h2>
@@ -51,7 +24,6 @@
                 <li><a href="syllabus.php" class="py-2 d-block">Academics</a></li>
                 <li><a href="admission.php" class="py-2 d-block">Admissions</a></li>
                 <li><a href="startup-innovation.php" class="py-2 d-block">Startup & Innovation</a></li>
-                <li><a href="policies.php" class="py-2 d-block">Policies</a></li>
                 <li><a href="contact.php" class="py-2 d-block">Contact</a></li>
               </ul>
             </div>
@@ -68,7 +40,47 @@
 	            </div>
             </div>
           </div>
+          <div class="col-md-2">
+            <div class="ftco-footer-widget mb-4">
+
+              <h4 style="color:#fff; margin-bottom:15px;">Policies</h4>
+
+              <p style="font-size:0.9em; margin-bottom:8px; color:#ccc;">
+                  <strong>Education Policy</strong>
+              </p>
+
+              <ul style="list-style:none; padding-left:0; font-size:0.85em; color:#ccc;">
+                  <li style="margin-bottom:6px;">✔ Equal education for all students</li>
+                  <li style="margin-bottom:6px;">✔ Safe and inclusive school environment</li>
+                  <li style="margin-bottom:6px;">✔ Zero discrimination policy</li>
+                  <li style="margin-bottom:6px;">✔ Continuous teacher development</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="ftco-footer-widget mb-4">
+              <div style="flex:1; min-width:220px; padding:10px;">
+
+                <p style="font-size:0.9em; margin-bottom:8px; color:#ccc;">
+                  <strong>Legal Policy</strong>
+                </p>
+
+                <p style="font-size:0.85em; color:#ccc; line-height:1.6;">
+                    We respect the privacy of our students, parents, and visitors. Any personal
+                    information collected through this website or during the admission process
+                    is used only for official school purposes.
+                    <br><br>
+                    The school does not share personal information with third parties without
+                    prior consent, except when required by law.
+                </p>
+
+            </div>
+
+            </div>
+          </div>
         </div>
+        
+
         <div class="row">
           <div class="col-md-12 text-center">
 
@@ -107,6 +119,19 @@
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = new bootstrap.Modal(
+    document.getElementById('admissionModal')
+  );
+  modal.show();
+});
+</script>
+
+   
 
   </body>
 </html>

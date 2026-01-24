@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
 <?php include __DIR__ . '/inc/header.php'; ?>
@@ -31,6 +32,75 @@ ini_set('display_errors', 1);
         as prescribed by the Government of India, ensuring free and compulsory education for eligible
         children in a fair and transparent manner.
     </p>
+
+    <div style="max-width:1100px; color:#333; align-items:center; justify-content:center;">
+
+    <div style="background:#fff; width:100%; max-width:500px; padding:25px;
+                border-radius:15px; position:relative; margin:0 auto;">
+
+        <h2 style="text-align:center; margin-bottom:20px; color:#2c3e50;">
+            RTE-Admission Form
+        </h2>
+
+        <form>
+            <input type="text" placeholder="Student Name" required
+                   style="width:100%; padding:10px; margin-bottom:15px;
+                          border-radius:6px; border:1px solid #ccc;">
+
+            <input type="text" placeholder="Parent / Guardian Name" required
+                   style="width:100%; padding:10px; margin-bottom:15px;
+                          border-radius:6px; border:1px solid #ccc;">
+
+            <input type="number" placeholder="Age" required
+                   style="width:100%; padding:10px; margin-bottom:15px;
+                          border-radius:6px; border:1px solid #ccc;">
+            
+            <input type="tel" placeholder="Mobile Number" required
+                   style="width:100%; padding:10px; margin-bottom:15px;
+                          border-radius:6px; border:1px solid #ccc;">
+
+              <select name="standard" required
+                style="width:100%; padding:10px; margin-bottom:15px;
+                          border-radius:6px; border:1px solid #ccc;">
+                <option value="">Select Standard</option>
+                <option>Nursery</option>
+                <option>LKG</option>
+                <option>UKG</option>
+                <option>Class 1</option>
+                <option>Class 2</option>
+                <option>Class 3</option>
+                <option>Class 4</option>
+                <option>Class 5</option>
+                <option>Class 6</option>
+                <option>Class 7</option>
+                <option>Class 8</option>
+                <option>Class 9</option>
+                <option>Class 10</option>
+                <option>Class 11</option>
+                <option>Class 12</option>
+              </select>
+
+
+            <input type="text" placeholder="RTE Application Number" required
+                   style="width:100%; padding:10px; margin-bottom:15px;
+                          border-radius:6px; border:1px solid #ccc;">
+
+            <textarea placeholder="Address" required
+                      style="width:100%; padding:10px; margin-bottom:20px;
+                             border-radius:6px; border:1px solid #ccc;"></textarea>
+
+            <div style="text-align:center;">
+                <button type="submit"
+                        style="background:#167ce9; color:#fff; padding:10px 25px;
+                               border:none; border-radius:6px; cursor:pointer;">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
 
     <!-- Eligibility -->
     <h2 style="color:#34495e; margin-bottom:20px;">Eligibility Criteria</h2>

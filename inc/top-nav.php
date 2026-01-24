@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container-fluid px-4">
     <a class="navbar-brand" href="index.php">
-      <img src="images/logo.png" style="height:40px; width:auto; margin-right:8px;">
+      <img src="images/logo.png" style="height:40px; width:auto; margin-right:8px;" alt="Uma Memorial Public School Logo">
       Uma Memorial Public School
     </a>
 

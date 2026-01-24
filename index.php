@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
 <?php include __DIR__ . '/inc/header.php'; ?>
@@ -260,148 +261,6 @@ creativity, and a lifelong love for reading.</p>
         </div>
     	</div>
     </section>
-
-    <!-- <section class="ftco-section testimony-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">What Our Student Says</h2>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12 ftco-animate">
-            <div class="carousel-testimony owl-carousel">
-              <div class="item">
-                <div class="testimony-wrap text-center">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">CSE Student</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap text-center">
-                  <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Math Student</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap text-center">
-                  <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Science Students</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap text-center">
-                  <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">English Student</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- <section class="ftco-section bg-light">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Our Experience Advisor</h2>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-lg-4 mb-sm-4 ftco-animate">
-        		<div class="staff">
-        			<div class="d-flex mb-4">
-        				<div class="img" style="background-image: url(images/person_1.jpg);"></div>
-        				<div class="info ml-4">
-        					<h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-        					<span class="position">CSE Teacher</span>
-        					<p class="ftco-social d-flex">
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-		              </p>
-        				</div>
-        			</div>
-        			<div class="text">
-        				<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-lg-4 mb-sm-4 ftco-animate">
-        		<div class="staff">
-        			<div class="d-flex mb-4">
-        				<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-        				<div class="info ml-4">
-        					<h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-        					<span class="position">CSE Teacher</span>
-        					<p class="ftco-social d-flex">
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-		              </p>
-        				</div>
-        			</div>
-        			<div class="text">
-        				<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-lg-4 mb-sm-4 ftco-animate">
-        		<div class="staff">
-        			<div class="d-flex mb-4">
-        				<div class="img" style="background-image: url(images/person_3.jpg);"></div>
-        				<div class="info ml-4">
-        					<h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-        					<span class="position">CSE Teacher</span>
-        					<p class="ftco-social d-flex">
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-		              </p>
-        				</div>
-        			</div>
-        			<div class="text">
-        				<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-        			</div>
-        		</div>
-        	</div>
-        </div>
-      </div>
-    </section> -->
-
     
 
     <section class="ftco-section">
@@ -458,146 +317,131 @@ creativity, and a lifelong love for reading.</p>
     	</div>
     </section>
 
-    <!-- <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Recent from blog</h2>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">How to standout at start of your UX Career</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">How to standout at start of your UX Career</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">How to standout at start of your UX Career</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Admission Modal -->
+<div class="modal fade" id="admissionModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="background:transparent;border:none;">
+      <div class="modal-body p-0">
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Our Latest Events</h2>
-          </div>
+        <div style="max-width:420px;margin:auto;background:#e9eef2;padding:25px;border-radius:6px;position:relative;">
+
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-2"
+                  data-bs-dismiss="modal"></button>
+
+          <h3 class="mb-3">Admission Enquiry Form</h3>
+
+          <form action="submit.php" method="POST">
+                <!-- Child Name -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                  <input type="text" name="child_name" placeholder="Child Name" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- Father Name -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                  <input type="text" name="father_name" placeholder="Father's Name" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- Mother Name -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                  <input type="text" name="mother_name" placeholder="Mother's Name" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- DOB -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-calendar-event-fill"></i>
+                  </span>
+                  <input type="date" name="dob" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- Mobile -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-phone-fill"></i>
+                  </span>
+                  <input type="tel" name="mobile" placeholder="Mobile*" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+
+                <!-- Standard -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-mortarboard-fill"></i>
+                  </span>
+                  <select name="standard" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                    <option value="">Select Standard</option>
+                    <option>Nursery</option>
+                    <option>LKG</option>
+                    <option>UKG</option>
+                    <option>Class 1</option>
+                    <option>Class 2</option>
+                    <option>Class 3</option>
+                    <option>Class 4</option>
+                    <option>Class 5</option>
+                    <option>Class 6</option>
+                    <option>Class 7</option>
+                    <option>Class 8</option>
+                    <option>Class 9</option>
+                    <option>Class 10</option>
+                    <option>Class 11</option>
+                    <option>Class 12</option>
+                  </select>
+                </div>
+
+                <!-- Address -->
+                <div style="background:#fff;border:1px solid #ddd;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;">
+                  <span style="padding:10px;font-size:18px;">
+                    <i class="bi bi-geo-alt"></i>
+                  </span>
+                  <input type="text" name="address" placeholder="Address" required
+                    style="border:none;outline:none;padding:12px;width:100%;">
+                </div>
+
+                <!-- CAPTCHA -->
+                <div style="background:#fff; border:1px solid #ddd; padding:12px; display:flex; align-items:center; gap:10px; margin-bottom:15px;">
+                  <input type="checkbox" required>
+                  <span>I'm not a robot</span>
+                  <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="35">
+                </div>
+
+                <!-- Button -->
+                <button type="submit"
+                  style="background:#167ce9; color:#fff; width:100%; padding:12px; font-size:18px; border:none; cursor:pointer;">
+                  Apply Now
+                </button>
+
+              </form>
+
         </div>
-        <div class="row">
-        	<div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-1.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sep. 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mb-4"><a href="#">Intern Bootcamp Meetup 2018</a></h3>
-                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry d-flex align-self-stretch flex-column-reverse">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-2.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sep. 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mb-4"><a href="#">Intern Bootcamp Meetup 2018</a></h3>
-                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-3.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sep. 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mb-4"><a href="#">Intern Bootcamp Meetup 2018</a></h3>
-                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
-    </section>
-		
-		<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+    </div>
+  </div>
+</div>
+
+
 <?php include __DIR__ . '/inc/footer.php'; ?>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.search.includes('popup=admission')) {
+      var modal = new bootstrap.Modal(document.getElementById('admissionModal'));
+      modal.show();
+    }
+  });
+</script>

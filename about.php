@@ -8,7 +8,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <?php include __DIR__ . '/inc/top-nav.php'; ?>
     <!-- END nav -->
     
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/DSC_4285.jpg'); background-attachment:fixed;">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/DSC_4285.JPG'); background-attachment:fixed;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">

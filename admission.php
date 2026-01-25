@@ -396,19 +396,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     </section>
 
 
-<!--
-<script>
-  $(document).ready(function () {
-    const url = new URL(window.location);
-    if (url.searchParams.get('popup') === 'admission') {
-      $('#admissionModal').modal('show');
-      url.searchParams.delete('popup');
-      window.history.replaceState({}, document.title, url.pathname);
-    }
-  });
-</script>-->
-
-
 <?php include __DIR__ . '/inc/footer.php'; ?>
 
 

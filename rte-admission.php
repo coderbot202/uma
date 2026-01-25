@@ -7,7 +7,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <?php include __DIR__ . '/inc/header.php'; ?>
 <?php include __DIR__ . '/inc/top-nav.php'; ?>
 
-<div class="hero-wrap hero-wrap-2" style="background-image: url('images/DSC_4285.jpg'); background-attachment:fixed;">
+<div class="hero-wrap hero-wrap-2" style="background-image: url('images/DSC_4285.JPG'); background-attachment:fixed;">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -204,88 +204,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         </p>
     </div>
 
-</div>
-
-<div id="admissionModal"
-     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-            background:rgba(0,0,0,0.6); align-items:center; justify-content:center;
-            z-index:9999;">
-
-    <div style="background:#fff; width:90%; max-width:500px; padding:25px;
-                border-radius:15px; position:relative;">
-
-        <!-- Close Button -->
-        <span onclick="document.getElementById('admissionModal').style.display='none'"
-              style="position:absolute; top:12px; right:15px; font-size:22px;
-                     cursor:pointer; color:#555;">&times;</span>
-
-        <h2 style="text-align:center; margin-bottom:20px; color:#2c3e50;">
-            Admission Form
-        </h2>
-
-        <form>
-            <input type="text" placeholder="Student Name" required
-                   style="width:100%; padding:10px; margin-bottom:15px;
-                          border-radius:6px; border:1px solid #ccc;">
-
-            <input type="text" placeholder="Parent / Guardian Name" required
-                   style="width:100%; padding:10px; margin-bottom:15px;
-                          border-radius:6px; border:1px solid #ccc;">
-
-            <input type="number" placeholder="Age" required
-                   style="width:100%; padding:10px; margin-bottom:15px;
-                          border-radius:6px; border:1px solid #ccc;">
-            
-            <input type="tel" placeholder="Mobile Number" required
-                   style="width:100%; padding:10px; margin-bottom:15px;
-                          border-radius:6px; border:1px solid #ccc;">
-
-              <select name="standard" required
-                style="width:100%; padding:10px; margin-bottom:15px;
-                          border-radius:6px; border:1px solid #ccc;">
-                <option value="">Select Standard</option>
-                <option>Nursery</option>
-                <option>LKG</option>
-                <option>UKG</option>
-                <option>Class 1</option>
-                <option>Class 2</option>
-                <option>Class 3</option>
-                <option>Class 4</option>
-                <option>Class 5</option>
-                <option>Class 6</option>
-                <option>Class 7</option>
-                <option>Class 8</option>
-                <option>Class 9</option>
-                <option>Class 10</option>
-                <option>Class 11</option>
-                <option>Class 12</option>
-              </select>
-
-
-            <input type="text" placeholder="RTE Application Number" required
-                   style="width:100%; padding:10px; margin-bottom:15px;
-                          border-radius:6px; border:1px solid #ccc;">
-
-            <textarea placeholder="Address" required
-                      style="width:100%; padding:10px; margin-bottom:20px;
-                             border-radius:6px; border:1px solid #ccc;"></textarea>
-
-            <div style="text-align:center;">
-                <button type="submit"
-                        style="background:#2c3e50; color:#fff; padding:10px 25px;
-                               border:none; border-radius:6px; cursor:pointer;">
-                    Submit
-                </button>
-
-                <button type="button"
-                        onclick="document.getElementById('admissionModal').style.display='none'"
-                        style="margin-left:10px; background:#ccc; padding:10px 25px;
-                               border:none; border-radius:6px; cursor:pointer;">
-                    Cancel
-                </button>
-            </div>
-        </form>
-    </div>
 </div>
 
 

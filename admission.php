@@ -300,7 +300,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
           </div>
           <div class="col-md-7">
             <img src="images/DSC_6227.JPG" alt="Image" class="img-fluid" style="padding-bottom:20px;">
-            <img src="images/feature-4.JPEG" alt="Image" class="img-fluid">
+            <img src="images/feature-4.jpeg" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>

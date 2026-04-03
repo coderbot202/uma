@@ -1,4 +1,13 @@
-<?php include "includes/header.php"; ?>
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+include "includes/header.php";
+require_once __DIR__ . "/config/app.php";
+require_once "backend/config/db.php";
+
+$query = "SELECT * FROM sample_papers ORDER BY id DESC";
+$result = mysqli_query($conn, $query);
+?>
 
 <div class="flex justify-between items-center mb-6">
     <div>
@@ -25,54 +34,100 @@
                     <th class="p-4 text-right">Actions</th>
                 </tr>
             </thead>
+
             <tbody class="text-sm text-slate-700 divide-y divide-slate-100">
-                <tr class="hover:bg-slate-50">
-                    <td class="p-4 font-medium">Mathematics</td>
-                    <td class="p-4">10</td>
-                    <td class="p-4">CBSE 2023</td>
-                    <td class="p-4">
-                        <a href="#" class="text-indigo-600 hover:underline">
-                            <i class="fas fa-download"></i> Download
-                        </a>
-                    </td>
-                    <td class="p-4 text-right space-x-2">
-                        <button class="text-blue-500 hover:text-blue-700">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button class="text-red-500 hover:text-red-700">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                    <td class="p-4 font-medium">Physics</td>
-                    <td class="p-4">12</td>
-                    <td class="p-4">State Board</td>
-                    <td class="p-4">
-                        <a href="#" class="text-indigo-600 hover:underline">
-                            <i class="fas fa-download"></i> Download
-                        </a>
-                    </td>
-                    <td class="p-4 text-right space-x-2">
-                        <button class="text-blue-500 hover:text-blue-700">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button class="text-red-500 hover:text-red-700">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </td>
-                </tr>
+
+                <?php if(mysqli_num_rows($result) > 0) { ?>
+
+                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
+
+                        <tr class="hover:bg-slate-50">
+
+                            <td class="p-4 font-medium">
+                                <?php echo $row['subject']; ?>
+                            </td>
+
+                            <td class="p-4">
+                                <?php echo $row['class_name']; ?>
+                            </td>
+
+                            <td class="p-4">
+                                <?php echo $row['year']; ?>
+                            </td>
+
+                            <td class="p-4">
+                                <a 
+                                    href="<?php echo BASE_URL; ?>backend/uploads/<?php echo $row['file_path']; ?>" 
+                                    target="_blank"
+                                    class="text-indigo-600 hover:underline"
+                                >
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </td>
+
+                            <td class="p-4 text-right space-x-2">
+
+                                <!-- EDIT (for future use) -->
+                                <!-- <button class="text-blue-500 hover:text-blue-700">
+                                    <i class="fas fa-edit"></i>
+                                </button> -->
+
+                                <!-- DELETE -->
+                                <a 
+                                    href="<?php echo BASE_URL; ?>backend/routes/samplePaperRoutes.php?delete=<?php echo $row['id']; ?>"
+                                    onclick="return confirm('Are you sure you want to delete this paper?')"
+                                    class="text-red-500 hover:text-red-700"
+                                >
+                                    <i class="fas fa-trash"></i>
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                    <?php } ?>
+
+                <?php } else { ?>
+
+                    <tr>
+                        <td colspan="5" class="text-center p-6 text-slate-400">
+                            No sample papers available
+                        </td>
+                    </tr>
+
+                <?php } ?>
+
             </tbody>
+
         </table>
     </div>
 </div>
+
 <script>
 function openModal(id) {
-    document.getElementById(id).classList.remove("hidden");
+    const modal = document.getElementById(id);
+    if(modal){
+        modal.classList.remove("hidden");
+    } else {
+        console.log("Modal not found:", id);
+    }
 }
 
 function closeModal() {
     document.getElementById("addPaperModal").classList.add("hidden");
 }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const fileInput = document.getElementById("fileInput");
+
+    if(fileInput){
+        fileInput.addEventListener("change", function() {
+            const fileName = this.files[0]?.name || "Click to upload PDF";
+            document.getElementById("fileText").innerText = fileName;
+        });
+    }
+});
+</script>
+
 <?php include "includes/modal.php"; ?>

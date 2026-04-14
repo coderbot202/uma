@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Careers at Uma Memorial Public School – find teaching jobs, administrative roles, staff benefits, and apply online for school job vacancies.">
     <title>Careers | Uma Memorial Public School</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.rel='stylesheet'">
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
+
+    
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        </noscript>
 
     <link rel="icon" type="image/jpg" href="images/logo-1_imresizer_1.jpg">
     <style>
@@ -26,10 +32,10 @@
         
         .gradient-bg {
             background: linear-gradient(
-      to right,
-      rgb(106, 0, 255) 0%,
-      rgb(255, 217, 0) 100%
-    );
+            to right,
+            rgb(106, 0, 255) 0%,
+            rgb(255, 217, 0) 100%
+            );
         }
         
         .card-hover {
@@ -338,7 +344,7 @@
             <div class="bg-white rounded-2xl shadow-sm p-6 mb-8 scroll-animate">
                 <div class="grid md:grid-cols-4 gap-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Department</label>
+                        <label for="filterDepartment" class="block text-sm font-medium text-gray-700 mb-2">Department</label>
                         <select id="filterDepartment" onchange="filterJobs()" class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white">
                             <option value="">All Departments</option>
                             <!-- Academic Group -->
@@ -362,7 +368,7 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Employment Type</label>
+                        <label for="filterType" class="block text-sm font-medium text-gray-700 mb-2">Employment Type</label>
                         <select id="filterType" onchange="filterJobs()" class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white">
                             <option value="">All Types</option>
                             <option value="full-time">Full Time</option>
@@ -371,7 +377,7 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Experience Level</label>
+                        <label for="filterExperience" class="block text-sm font-medium text-gray-700 mb-2">Experience Level</label>
                         <select id="filterExperience" onchange="filterJobs()" class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white">
                             <option value="">All Levels</option>
                             <option value="entry">Entry Level</option>
@@ -738,16 +744,16 @@
 
             <!-- Social Icons -->
             <div class="flex gap-4">
-            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
+            <a href="https://www.youtube.com/@umamemorial22" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
                 <i class="fab fa-youtube text-white"></i>
             </a>
-            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
+            <a href="https://www.facebook.com/umamemorial22/" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
                 <i class="fab fa-facebook-f text-white"></i>
             </a>
-            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
+            <a href="https://www.instagram.com/umamemorial22/" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
                 <i class="fab fa-instagram text-white"></i>
             </a>
-            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
+            <a href="https://www.linkedin.com/jobs/view/school-teacher-at-uma-memorial-public-school-4398734139?originalSubdomain=in" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#FFC300] transition">
                 <i class="fab fa-linkedin-in text-white"></i>
             </a>
             </div>
@@ -1272,5 +1278,7 @@
             this.querySelector('input[type="file"]').click();
         });
     </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

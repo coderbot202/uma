@@ -25,13 +25,14 @@
 
     <link rel="icon" type="image/jpg" href="images/logo-1_imresizer_1.jpg">
     <link rel="stylesheet"  href="career.css"/>
-    <style>
-        body{
-            margin:0;
-        }
-        
 
+    <style>
+        body {
+        font-family: 'Inter', system-ui, Arial, sans-serif;
+        margin: 0;
+        }
     </style>
+
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -815,6 +816,6 @@
 
     <script src="career.js" defer></script>
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
 </body>
 </html>

@@ -39,33 +39,60 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-full flex items-center justify-center">
-                        <!--<i class="fas fa-graduation-cap text-white text-lg"></i>-->
-                        <img src="images/logo.webp" alt="UMPS">
+
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center">
+                        <img src="images/logo.webp" alt="UMPS" class="w-full h-full object-contain">
                     </div>
-                    <span class="font-bold text-xl text-gray-800">Uma Memorial Public School</span>
+                    <span class="font-bold text-sm sm:text-lg md:text-xl text-gray-800 leading-tight">
+                        Uma Memorial <br class="sm:hidden"> Public School
+                    </span>
                 </div>
-                <div class="px-4 py-3">
-                    <div class="auth-buttons">
-                        <a href="index.php" class="text-gray-700 transition hover:text-[#167CE9] px-2 mt-3">Home</a>
-                        <a href="about.php" class="text-gray-700 transition hover:text-[#167CE9] px-2 mt-3">About</a>
-                        <a href="login.php" class="bg-[#167CE9] text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#FFC300] transition shadow-lg">Login</a>
-                        <a href="signup.php" class="bg-[#FFC300] text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#167CE9] transition">Sign Up</a>
-                    </div>
-                    <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.php" class="text-gray-700 transition hover:text-[#167CE9]">
+                        Home
+                    </a>
+                    <a href="about.php" class="text-gray-700 transition hover:text-[#167CE9]">
+                        About
+                    </a>
+                    <a href="login.php"
+                        class="bg-[#167CE9] text-white px-5 py-2 rounded-full font-semibold hover:bg-white hover:text-[#FFC300] transition shadow-lg">
+                        Login
+                    </a>
+                    <a href="signup.php"
+                        class="bg-[#FFC300] text-white px-5 py-2 rounded-full font-semibold hover:bg-white hover:text-[#167CE9] transition">
+                        Sign Up
+                    </a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 text-2xl" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
             </div>
         </div>
+
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-3 space-y-3">
-                <div class="auth-buttons">
-                    <a href="login.php" class="bg-[#167CE9] text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#FFC300] transition shadow-lg">Login</a>
-                    <a href="signup.php" class="bg-[#FFC300] text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#167CE9] transition">Sign Up</a>
-                </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-md">
+            <div class="flex flex-col px-4 py-4 space-y-3">
+                <a href="index.php" class="text-gray-700 hover:text-[#167CE9]">
+                    Home
+                </a>
+                <a href="about.php" class="text-gray-700 hover:text-[#167CE9]">
+                    About
+                </a>
+                <a href="login.php"
+                    class="bg-[#167CE9] text-white text-center px-5 py-2 rounded-full font-semibold hover:bg-white hover:text-[#FFC300] transition shadow-lg">
+                    Login
+                </a>
+                <a href="signup.php"
+                    class="bg-[#FFC300] text-white text-center px-5 py-2 rounded-full font-semibold hover:bg-white hover:text-[#167CE9] transition">
+                    Sign Up
+                </a>
             </div>
         </div>
     </nav>

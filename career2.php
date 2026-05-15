@@ -98,7 +98,7 @@
     </nav>
 
     <!-- Hero Section border-2 border-white -->
-    <section class="gradient-bg py-20 md:py-32 relative overflow-hidden">
+    <section class="gradient-bg min-h-screen flex items-center relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>

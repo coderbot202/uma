@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 require_once __DIR__ . "/backend/config/db.php";
 require_once __DIR__ . "/config/app.php";
 include "includes/header.php"; 
+require_once "backend/middleware/admin.php";
 
 $query = "SELECT * FROM syllabus ORDER BY id DESC";
 $result = mysqli_query($conn, $query);

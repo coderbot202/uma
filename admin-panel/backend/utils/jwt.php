@@ -1,9 +1,11 @@
 <?php
 
+require_once __DIR__ . "/../../config/env.php";
+
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
-$secret_key = "your_secret_key_here";
+$secret_key = $_ENV['JWT_SECRET'];
 
 function generateJWT($user) {
     global $secret_key;

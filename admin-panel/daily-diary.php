@@ -2,6 +2,7 @@
 include "includes/header.php";
 require_once "config/app.php";
 require_once "backend/config/db.php";
+require_once "backend/middleware/admin.php";
 
 $query = "SELECT * FROM daily_diary ORDER BY id DESC";
 $result = mysqli_query($conn, $query);

@@ -14,7 +14,12 @@ class AuthController {
         $this->user = new User($conn);
     }
 
-    // 🔹 REGISTER
+    private function error($message) {
+        header("Location: " . BASE_URL . "login.php?error=" . urlencode($message));
+        exit();
+    }
+
+    // REGISTER
     public function register() {
 
         $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
@@ -24,17 +29,21 @@ class AuthController {
         // role (safe default)
         $role = $_POST['role'] ?? 'user';
 
+        if ($role === "admin" && $this->user->adminExists()) {
+            $this->error("Admin already exists");
+        }
+
         if (!$email || !$password || !$username) {
-            die("All fields required");
+            $this->error("All fields are required");
         }
 
         if (strlen($password) < 6) {
-            die("Password must be at least 6 characters");
+            $this->error("Password must be at least 6 characters");
         }
 
         // check user exists
         if ($this->user->findByEmail($email)) {
-            die("User already exists");
+            $this->error("Email already registered");
         }
 
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
@@ -65,17 +74,32 @@ class AuthController {
         $password = $_POST['password'] ?? null;
 
         if (!$email || !$password) {
-            die("Email & password required");
+            $this->error("Email and password are required");
         }
 
         $user = $this->user->findByEmail($email);
 
-        if (!$user || !password_verify($password, $user['password'])) {
-            die("Invalid credentials");
+        // echo "<pre>";
+        // print_r($user);
+
+        // echo "<br><br>";
+
+        // var_dump(password_verify($password, $user['password']));
+        // exit();
+
+        if (!$user) {
+            $this->error("User not found");
         }
 
-        // start session
-        session_start();
+        if (!password_verify($password, $user['password'])) {
+            $this->error("Incorrect password");
+        }
+
+        if(session_status() === PHP_SESSION_NONE){
+            session_start();
+        }
+
+        session_regenerate_id(true);
 
         $_SESSION['user'] = [
             "id" => $user['id'],
@@ -84,7 +108,10 @@ class AuthController {
             "role" => $user['role']
         ];
 
-        // ROLE BASED REDIRECT
+        // echo "<pre>";
+        // print_r($_SESSION);
+        // exit();
+
         if ($user['role'] === 'admin') {
             header("Location: " . BASE_URL . "admin-panel/index.php");
         } else {

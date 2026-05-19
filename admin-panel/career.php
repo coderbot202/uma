@@ -4,6 +4,7 @@ include "includes/header.php";
 require_once "backend/config/db.php";
 require_once "config/app.php";
 require_once "backend/models/job.php";
+require_once "backend/middleware/admin.php";
 
 $job = new job($conn);
 

@@ -2,6 +2,7 @@
 include "includes/header.php";
 require_once "backend/config/db.php";
 require_once "backend/models/Query.php";
+require_once "backend/middleware/admin.php";
 
 $queryModel = new Query($conn);
 

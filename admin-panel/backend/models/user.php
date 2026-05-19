@@ -8,6 +8,17 @@ class User {
         $this->conn = $conn;
     }
 
+    public function adminExists() {
+
+        $stmt = $this->conn->prepare(
+            "SELECT id FROM users WHERE role='admin' LIMIT 1"
+        );
+    
+        $stmt->execute();
+    
+        return $stmt->get_result()->fetch_assoc();
+    }
+
     public function register($data) {
         // $password = password_hash($data['password'], PASSWORD_BCRYPT);
 

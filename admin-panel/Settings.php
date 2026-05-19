@@ -1,4 +1,7 @@
-<?php include "includes/header.php"; ?>
+<?php 
+include "includes/header.php"; 
+require_once "backend/middleware/admin.php";
+?>
 <div class="flex justify-between items-center mb-6">
     <div>
         <p class="text-slate-500 text-sm">Others</p>

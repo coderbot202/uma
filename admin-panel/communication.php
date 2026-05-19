@@ -1,7 +1,11 @@
-<?php include "includes/header.php"; ?>
+<?php 
+include "includes/header.php"; 
+require_once "backend/middleware/admin.php";
+?>
 <?php if(isset($_GET['success'])): ?>
     <p class="text-green-600 mb-4">Message sent successfully!</p>
 <?php endif; ?>
+
 
 <div class="flex justify-between items-center mb-6">
     <div>

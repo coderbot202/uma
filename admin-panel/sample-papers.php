@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 include "includes/header.php";
 require_once __DIR__ . "/config/app.php";
 require_once "backend/config/db.php";
+require_once "backend/middleware/admin.php";
 
 $query = "SELECT * FROM sample_papers ORDER BY id DESC";
 $result = mysqli_query($conn, $query);

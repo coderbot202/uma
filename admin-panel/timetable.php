@@ -1,6 +1,7 @@
 <?php 
 include "includes/header.php"; 
 // include "includes/modal.php";
+require_once "backend/middleware/admin.php";
 require_once __DIR__ . "/backend/config/db.php";
 require_once __DIR__ . "/config/app.php";
 

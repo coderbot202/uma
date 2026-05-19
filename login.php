@@ -2,8 +2,24 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
+<?php
+session_start();
+
+if(isset($_SESSION['user'])){
+
+    if($_SESSION['user']['role'] === 'admin'){
+        header("Location: admin-panel/index.php");
+    } else {
+        header("Location: index.php");
+    }
+
+    exit();
+}
+?>
 <?php if(isset($_GET['error'])) { ?>
-  <p style="color:red;">Invalid email or password</p>
+  <p style="color:red;">
+    <?php echo htmlspecialchars($_GET['error']); ?>
+  </p>
 <?php } ?>
 
 <!-- <?php if(isset($_GET['success'])) { ?>

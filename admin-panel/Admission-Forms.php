@@ -6,6 +6,7 @@ include "includes/header.php";
 
 require_once "backend/config/db.php";
 require_once "backend/models/admission.php";
+require_once "backend/middleware/admin.php";
 
 $admission = new Admission($conn);
 $result = $admission->getAll();

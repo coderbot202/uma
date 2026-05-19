@@ -25,4 +25,6 @@ if (!in_array($page, $allowedPages)) {
 $pageTitle = ucwords(str_replace('-', ' ', $page));
 $content = "$page.php";
 
+require_once "backend/middleware/admin.php";
+
 include "includes/layout.php";

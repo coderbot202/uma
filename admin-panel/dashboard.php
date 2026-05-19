@@ -2,6 +2,7 @@
 include 'includes/header.php';
 
 require_once "backend/config/db.php";
+require_once "backend/middleware/admin.php";
 
 /* total notices */
 $totalQuery = "SELECT COUNT(*) AS total_notices FROM notices";

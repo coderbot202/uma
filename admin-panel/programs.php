@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 require_once "backend/config/db.php";
 require_once "config/app.php";
 require_once "backend/models/Program.php";
+require_once "backend/middleware/admin.php";
 
 $program = new Program($conn);
 $programs = $program->getAll();

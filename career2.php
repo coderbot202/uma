@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Careers at Uma Memorial Public School – find teaching jobs, administrative roles, staff benefits, and apply online for school job vacancies.">
     <title>Careers | Uma Memorial Public School</title>
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +42,8 @@
 
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                    <div class="w-[70px] h-[41px] flex-shrink-0 rounded-full flex items-center justify-center">
-                        <img src="images/logo-2.webp" alt="UMPS" width="70" height="41" loading="eager" fetchpriority="high" class="object-contain">
+                    <div class="w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center">
+                        <img src="images/logo-2.webp" alt="UMPS" class="w-full h-full object-contain">
                     </div>
                     <span class="font-bold text-sm sm:text-lg md:text-xl text-gray-800 leading-tight">
                         Uma Memorial <br class="sm:hidden"> Public School
@@ -607,7 +608,7 @@
         <!-- Logo + About -->
         <div>
             <div class="flex items-center gap-3 mb-6">
-            <img src="images/logo-2.webp" width="70" height="41" alt="UMPS">
+            <img src="images/logo-1.webp" class="w-14" alt="UMPS">
             <div>
                 <h2 class="text-xl font-semibold text-white">UMA MEMORIAL</h2>
                 <p class="text-sm tracking-widest text-blue-400">PUBLIC SCHOOL</p>

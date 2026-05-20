@@ -43,7 +43,7 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <div class="w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center">
-                        <img src="images/logo.webp" alt="UMPS" class="w-full h-full object-contain">
+                        <img src="images/logo-2.webp" alt="UMPS" class="w-full h-full object-contain">
                     </div>
                     <span class="font-bold text-sm sm:text-lg md:text-xl text-gray-800 leading-tight">
                         Uma Memorial <br class="sm:hidden"> Public School

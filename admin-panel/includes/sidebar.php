@@ -21,7 +21,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
 <nav class="flex-1 overflow-y-auto py-4">
             <ul class="space-y-1 px-3">
                 <li>
-                    <a href="index.php?page=dashboard" class="nav-item w-full flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors 
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=dashboard" class="nav-item w-full flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors 
                     <?php echo ($currentPage == 'dashboard') 
                         ? 'bg-slate-800 text-white' 
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -32,7 +32,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                 
                 <li class="pt-4 pb-2 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Academics</li>
                 <li>
-                    <a href="index.php?page=sample-papers" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors 
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=sample-papers" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors 
                     <?php echo ($currentPage == 'sample-papers') 
                         ? 'bg-slate-800 text-white' 
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -41,7 +41,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=syllabus" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors 
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=syllabus" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors 
                     <?php echo ($currentPage == 'syllabus') 
                         ? 'bg-slate-800 text-white' 
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -50,7 +50,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=timetable" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=timetable" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'timetable') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -61,7 +61,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
 
                 <li class="pt-4 pb-2 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Campus</li>
                 <li>
-                    <a href="index.php?page=notice-board" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=notice-board" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'notice-board') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -70,7 +70,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=daily-diary" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=daily-diary" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'daily-diary') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -79,7 +79,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=career" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=career" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'career') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -88,7 +88,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=programs" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=programs" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'programs') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -98,7 +98,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                 </li>
                 <li class="pt-4 pb-2 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Communication</li>
                 <li>
-                    <a href="index.php?page=communication" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=communication" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'communication') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -108,7 +108,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                 </li>
                 <li class="pt-4 pb-2 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Others</li>
                 <li>
-                    <a href="index.php?page=query-handler" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=query-handler" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'query-handler') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -117,7 +117,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=Admission-Forms" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=Admission-Forms" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'Admission-Forms') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">
@@ -126,7 +126,7 @@ $userEmail = $_SESSION['user']['email'] ?? 'guest@email.com';
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=Settings" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
+                    <a href="<?php echo BASE_URL; ?>admin-panel/index.php?page=Settings" class="nav-item w-full flex items-center gap-4 px-4 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors
                     <?php echo ($currentPage == 'Settings') 
                         ? 'bg-slate-800 text-white'
                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'; ?>">

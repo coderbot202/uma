@@ -61,7 +61,7 @@ $result2 = mysqli_query($conn, $query2);
     						<div class="one-half">
     							<div class="featured-blog d-md-flex">
     								<div class="image d-flex order-last">
-    									<a href="#" class="img" style="background: url(images/feature-4.jpeg);" loading="lazy" decoding="async"></a>
+    									<a href="#" class="img" style="background: url(images/feature-4.jpeg);" name="course" loading="lazy" decoding="async"></a>
     								</div>
     								<div class="text order-first">
     									<span class="date">Sep 07, 2025</span>
@@ -258,7 +258,7 @@ creativity, and a lifelong love for reading.</p>
     			<div class="col-md-9 about-video text-center">
     				<h2 class="ftco-animate ion-ios-rocket">Turning Classrooms into Launchpads.</h2>
     				<div class="video d-flex justify-content-center">
-    					<a href="https://youtu.be/--PASA5_2ok?si=GK-UhEIUAW-TSb9l" class="button popup-youtube d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
+    					<a href="https://youtu.be/--PASA5_2ok?si=GK-UhEIUAW-TSb9l" class="button popup-youtube d-flex justify-content-center align-items-center" name="yt"><span class="ion-ios-play"></span></a>
     				</div>
     			</div>
     		</div>
@@ -371,8 +371,7 @@ creativity, and a lifelong love for reading.</p>
 
         <div style="max-width:420px;margin:auto;background:#e9eef2;padding:25px;border-radius:6px;position:relative;">
 
-          <button type="button" class="btn-close position-absolute top-0 end-0 m-2"
-                  data-bs-dismiss="modal"></button>
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close popup"></button>
 
           <h3 class="mb-3">Admission Enquiry Form</h3>
 
@@ -383,6 +382,7 @@ creativity, and a lifelong love for reading.</p>
               <span style="padding:10px;font-size:18px;">
                 <i class="bi bi-person-fill"></i>
               </span>
+              <label for="child's name"></label>
               <input type="text" name="child_name" placeholder="Child Name" required
                 style="border:none;outline:none;padding:12px;width:100%;">
             </div>
@@ -392,6 +392,7 @@ creativity, and a lifelong love for reading.</p>
               <span style="padding:10px;font-size:18px;">
                 <i class="bi bi-person-fill"></i>
               </span>
+              <label for="father's name"></label>
               <input type="text" name="father_name" placeholder="Father's Name" required
                 style="border:none;outline:none;padding:12px;width:100%;">
             </div>
@@ -401,6 +402,7 @@ creativity, and a lifelong love for reading.</p>
               <span style="padding:10px;font-size:18px;">
                 <i class="bi bi-person-fill"></i>
               </span>
+              <label for="mother's name"></label>
               <input type="text" name="mother_name" placeholder="Mother's Name" required
                 style="border:none;outline:none;padding:12px;width:100%;">
             </div>
@@ -410,7 +412,8 @@ creativity, and a lifelong love for reading.</p>
               <span style="padding:10px;font-size:18px;">
                 <i class="bi bi-calendar-event-fill"></i>
               </span>
-              <input type="date" name="admission_date" required
+              <label for="Date of Birth"> </label>
+              <input type="date" name="admission_date" required 
                 style="border:none;outline:none;padding:12px;width:100%;">
             </div>
 
@@ -419,7 +422,8 @@ creativity, and a lifelong love for reading.</p>
               <span style="padding:10px;font-size:18px;">
                 <i class="bi bi-phone-fill"></i>
               </span>
-              <input type="tel" name="mobile" placeholder="Mobile*" required
+              <label for="Mobile Number"></label>
+              <input type="tel" name="mobile" placeholder="Mobile*" required 
                 style="border:none;outline:none;padding:12px;width:100%;">
             </div>
 
@@ -428,6 +432,7 @@ creativity, and a lifelong love for reading.</p>
               <span style="padding:10px;font-size:18px;">
                 <i class="bi bi-mortarboard-fill"></i>
               </span>
+              <label for="student_class"></label>
               <select name="class" required
                 style="border:none;outline:none;padding:12px;width:100%;">
                 <option value="">Select Class</option>
@@ -455,12 +460,14 @@ creativity, and a lifelong love for reading.</p>
               <span style="padding:10px;font-size:18px;">
                 <i class="bi bi-geo-alt"></i>
               </span>
+              <label for="address"></label>
               <input type="text" name="address" placeholder="Address" required
                 style="border:none;outline:none;padding:12px;width:100%;">
             </div>
 
             <!-- CAPTCHA -->
             <div style="background:#fff; border:1px solid #ddd; padding:12px; display:flex; align-items:center; gap:10px; margin-bottom:15px;">
+              <label for="checkbox"></label>
               <input type="checkbox" required>
               <span>I'm not a robot</span>
             </div>
@@ -469,8 +476,7 @@ creativity, and a lifelong love for reading.</p>
             <input type="hidden" name="captcha" value="8">
 
             <!-- Button -->
-            <button type="submit"
-              style="background:#167ce9; color:#fff; width:100%; padding:12px; font-size:18px; border:none; cursor:pointer;">
+            <button type="submit" style="background:#167ce9; color:#fff; width:100%; padding:12px; font-size:18px; border:none; cursor:pointer;" aria-label="Submit Details">
               Apply Now
             </button>
 

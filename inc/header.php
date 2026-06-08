@@ -4,6 +4,7 @@
     <title>Uma Memorial Public School </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Uma Memorial Public School in Varanasi offers quality education, smart classrooms, innovation programs, and holistic development from PlayGroup to Class 12.">
    
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">

@@ -77,8 +77,6 @@ class CommunicationController {
                 if ($type == "email") {
                     $this->sendEmail($user['email'], $subject, $message);
                 }
-
-                // ❌ temporarily remove this
                 // $this->model->saveRecipient(...)
 
             } catch (Exception $e) {

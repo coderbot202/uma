@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && empty($_POST["id"])) {
     }
     
     $newFileName = time() . "_" . uniqid() . ".pdf";
+    $uploadDir = realpath(__DIR__ . "/../../../") . "/uploads/";
 
     if (!is_dir($uploadDir)) {
         mkdir($uploadDir, 0777, true);

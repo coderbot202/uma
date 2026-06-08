@@ -5,12 +5,16 @@ ini_set('display_errors', 1);
 <?php
 session_start();
 
+// echo "<pre>";
+// print_r($_SESSION);
+// die();
+
 if(isset($_SESSION['user'])){
 
     if($_SESSION['user']['role'] === 'admin'){
-        header("Location: admin-panel/index.php");
+        header("Location: /uma/admin-panel/index.php");
     } else {
-        header("Location: index.php");
+        header("Location: /uma/index.php");
     }
 
     exit();

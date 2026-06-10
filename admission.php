@@ -7,8 +7,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <?php include __DIR__ . '/inc/header.php'; ?>
 <?php include __DIR__ . '/inc/top-nav.php'; ?>
 <?php require_once "admin-panel/config/app.php"; ?>
-<?php require_once "admin-panel/backend/config/db.php"; ?>
-<?php require_once "admin-panel/backend/controllers/admissionController.php"; ?>
+<?php require_once __DIR__ . "admin-panel/backend/config/db.php"; ?>
+<?php require_once __DIR__ . "admin-panel/backend/controllers/admissionController.php"; ?>
  
     
     <div class="hero-wrap hero-wrap-2" style="background-image: url('images/DSC_4285.JPG'); background-attachment:fixed;">

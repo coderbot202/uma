@@ -28,4 +28,3 @@ build/
 uploads/
 
 # local db config
-/admin-panel/backend/config/db.php
